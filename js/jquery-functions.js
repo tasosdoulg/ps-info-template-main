@@ -429,34 +429,34 @@ $("document").ready(function () {
         console.log(selectedRadioButtonIndex);
         if (currentQuestion === 0 && selectedRadioButtonIndex === 2) {
           currentQuestion = -1;
-          currentLanguage === "greek" ? skipToEnd("Λυπούμαστε αλλά πρέιπει να είστε έμπορος ειδών πυροτεχνίας ή νόμιμος εκπρόσωπος εταιρείας που εμπορεύεται είδη πυροτεχνίας.") : skipToEnd("We are sorry, but you must be a fireworks dealer or a legal representative of a company that sells fireworks.");
-        } else if (currentQuestion === 1 && selectedRadioButtonIndex === 2) {
+          currentLanguage === "greek" ? skipToEnd("Πρέιπει να είστε έμπορος ειδών πυροτεχνίας ή νόμιμος εκπρόσωπος εταιρείας που εμπορεύεται είδη πυροτεχνίας.") : skipToEnd("You have to be a fireworks dealer or a legal representative of a company that sells fireworks.");
+        } else if (currentQuestion === 1 && selectedRadioButtonIndex === 1) {
           currentQuestion = -1;
-          currentLanguage === "greek" ? skipToEnd("Λυπούμαστε αλλά δεν δικαιούστε την άδεια αμα πάσχετε από μείζονα ψυχική διαταραχή ή σοβαρή διαταραχή προσωπικότητας") : skipToEnd("We are sorry but you are not eligible for leave if you suffer from a major mental disorder or a serious personality disorder.");
+          currentLanguage === "greek" ? skipToEnd("Επειδή πάσχετε από μείζονα ψυχική διαταραχή ή σοβαρή διαταραχή προσωπικότητας") : skipToEnd("Because you suffer from a major mental disorder or a serious personality disorder.");
         } else if (currentQuestion === 2 && selectedRadioButtonIndex === 1) {
           currentQuestion = -1;
-          skipToEnd;
+          currentLanguage === "greek" ? skipToEnd(): skipToEnd();
         }  else if (currentQuestion === 2 && selectedRadioButtonIndex === 2) {
             currentQuestion = -1;
-            skipToEnd;
+            currentLanguage === "greek" ? skipToEnd() : skipToEnd();
           }  else if (currentQuestion === 3 && selectedRadioButtonIndex === 1) {
             currentQuestion = -1;
-            skipToEnd;
+            currentLanguage === "greek" ? skipToEnd() : skipToEnd();
           }  else if (currentQuestion === 3 && selectedRadioButtonIndex === 2) {
             currentQuestion = -1;
-            skipToEnd;
+            currentLanguage === "greek" ? skipToEnd() : skipToEnd();
           }  else if (currentQuestion === 3 && selectedRadioButtonIndex === 3) {
             currentQuestion = -1;
-            skipToEnd;
+            currentLanguage === "greek" ? skipToEnd() : skipToEnd();
           }  else if (currentQuestion === 3 && selectedRadioButtonIndex === 4) {
             currentQuestion = -1;
-            skipToEnd;
+            currentLanguage === "greek" ? skipToEnd() : skipToEnd();
           }  else if (currentQuestion === 3 && selectedRadioButtonIndex === 5) {
             currentQuestion = -1;
-            skipToEnd;
+            currentLanguage === "greek" ? skipToEnd() : skipToEnd();
           }  else if (currentQuestion === 3 && selectedRadioButtonIndex === 6) {
             currentQuestion = -1;
-            skipToEnd;
+            currentLanguage === "greek" ? skipToEnd() : skipToEnd();
         } else {
           //save selectedRadioButtonIndex to the storage
           userAnswers[currentQuestion] = selectedRadioButtonIndex;

@@ -302,8 +302,8 @@ $("document").ready(function () {
     const errorEnd = document.createElement("h5");
     const error =
       currentLanguage === "greek"
-        ? "Λυπούμαστε αλλά δεν δικαιούστε το δελτίο μετακίνησης ΑΜΕΑ!"
-        : "We are sorry but you are not entitled to the transportation card for the disabled!";
+        ? "Λυπούμαστε αλλά δεν δικαιούστε την άδεια μεταφοράς πυροτεχνημάτων Κατηγορίας."
+        : "We are sorry but you are not eligible for a Category 1 fireworks transport permit.";
     errorEnd.className = "govgr-error-summary";
     errorEnd.textContent = error + " " + message;
     $(".question-container").html(errorEnd);
@@ -427,15 +427,36 @@ $("document").ready(function () {
           $('input[name="question-option"]:checked')
         ) + 1;
       console.log(selectedRadioButtonIndex);
-      if (currentQuestion === 0 && selectedRadioButtonIndex === 3) {
+      if (currentQuestion === 0 && selectedRadioButtonIndex === 2) {
         currentQuestion = -1;
-        currentLanguage === "greek" ? skipToEnd("Μπορείτε να το εκδώσετε ξανά μόνο μια φορά μετά από απώλεια.") : skipToEnd("You can reissue it only one time after loss.");
+        currentLanguage === "greek" ? skipToEnd("Λυπούμαστε αλλά πρέιπει να είστε έμπορος ειδών πυροτεχνίας ή νόμιμος εκπρόσωπος εταιρείας που εμπορεύεται είδη πυροτεχνίας.") : skipToEnd("We are sorry, but you must be a fireworks dealer or a legal representative of a company that sells fireworks.");
       } else if (currentQuestion === 1 && selectedRadioButtonIndex === 2) {
         currentQuestion = -1;
-        currentLanguage === "greek" ? skipToEnd("Πρέπει να είστε μόνιμος και νόμιμος κάτοικος της Ελλάδας.") : skipToEnd("You must be permanent and legal resident of Greece.");
-      } else if (currentQuestion === 3 && selectedRadioButtonIndex === 2) {
+        currentLanguage === "greek" ? skipToEnd("Λυπούμαστε αλλά δεν δικαιούστε την άδεια αμα πάσχετε από μείζονα ψυχική διαταραχή ή σοβαρή διαταραχή προσωπικότητας") : skipToEnd("We are sorry but you are not eligible for leave if you suffer from a major mental disorder or a serious personality disorder.");
+      } else if (currentQuestion === 2 && selectedRadioButtonIndex === 1) {
         currentQuestion = -1;
-        currentLanguage === "greek" ? skipToEnd("Πρέπει να έχετε ποσοστό αναπηρίας 67% και άνω ή να είστε δικαιούχος του επιδόματος ΟΠΕΚΑ.") : skipToEnd("You must have a disability rate of 67% or more or be a beneficiary of the OPEKA benefit.");
+        skipToEnd;
+      }  else if (currentQuestion === 2 && selectedRadioButtonIndex === 2) {
+          currentQuestion = -1;
+          skipToEnd;
+        }  else if (currentQuestion === 3 && selectedRadioButtonIndex === 1) {
+          currentQuestion = -1;
+          skipToEnd;
+        }  else if (currentQuestion === 3 && selectedRadioButtonIndex === 2) {
+          currentQuestion = -1;
+          skipToEnd;
+        }  else if (currentQuestion === 3 && selectedRadioButtonIndex === 3) {
+          currentQuestion = -1;
+          skipToEnd;
+        }  else if (currentQuestion === 3 && selectedRadioButtonIndex === 4) {
+          currentQuestion = -1;
+          skipToEnd;
+        }  else if (currentQuestion === 3 && selectedRadioButtonIndex === 5) {
+          currentQuestion = -1;
+          skipToEnd;
+        }  else if (currentQuestion === 3 && selectedRadioButtonIndex === 6) {
+          currentQuestion = -1;
+          skipToEnd;
       } else {
         //save selectedRadioButtonIndex to the storage
         userAnswers[currentQuestion] = selectedRadioButtonIndex;
